@@ -69,4 +69,5 @@ const authString = await client.exportAuthString();
 console.log();
 console.log("The auth string for the current session is:");
 console.log(authString);
+console.log();
 await client.disconnect();

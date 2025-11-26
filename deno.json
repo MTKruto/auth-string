@@ -2,12 +2,17 @@
   "name": "@mtkruto/auth-string",
   "version": "0.0.0",
   "tasks": {
-    "dev": "deno run --watch main.ts"
+    "dev": "deno run --watch main.ts",
+    "transform": "deno --allow-env --allow-read --allow-run --allow-write=. _transform.ts"
   },
   "exports": {
     ".": "./main.ts"
   },
   "imports": {
+    "@deno/dnt": "jsr:@deno/dnt@^0.42.3",
     "@mtkruto/mtkruto": "jsr:@mtkruto/mtkruto@^0.75.1"
-  }
+  },
+  "exclude": [
+    "/dist/"
+  ]
 }
